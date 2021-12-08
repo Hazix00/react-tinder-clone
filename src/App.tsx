@@ -1,10 +1,14 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
+import Header from './components/Header/Header';
 
 function App() {
   return (
     <div className="app">
-      <h2>This is a Tinder clone app!!!</h2>
+      {/* TODO Header */}
+      <Header/>
+      {/* TODO TinderCards */}
+      {/* TODO SwipeButtons */}
     </div>
   );
 }
