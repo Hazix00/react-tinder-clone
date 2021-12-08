@@ -1,14 +1,15 @@
 import React from 'react';
 import './App.scss';
 import Header from './components/Header/Header';
+import SwipeButtons from './components/SwipeButtons/SwipeButtons';
+import TinderCards from './components/TinderCards/TinderCards';
 
 function App() {
   return (
     <div className="app">
-      {/* TODO Header */}
       <Header/>
-      {/* TODO TinderCards */}
-      {/* TODO SwipeButtons */}
+      <TinderCards/>
+      <SwipeButtons/>
     </div>
   );
 }
