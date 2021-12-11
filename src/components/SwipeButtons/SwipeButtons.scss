@@ -2,13 +2,14 @@
     display: flex;
     justify-content: space-evenly;
     position: fixed;
-    bottom: 4vh;
+    bottom: 1.25rem;
     width: 100%;
+    max-width: $app_max_width;
     
     .MuiIconButton-root {
         background-color: #fff;
         box-shadow: 0 10px 53px 0 rgba(0, 0, 0, 0.3) !important;
-        padding: 3vw !important;
+        padding: 1.25rem !important;
     }
 
     // &__repeat, &__left, &__star, &__right, &__lightning {
