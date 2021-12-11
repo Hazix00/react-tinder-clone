@@ -1,12 +1,21 @@
-import { ReactElement, useState } from 'react'
+import { ReactElement, useEffect, useState } from 'react'
 import './TinderCards.scss'
 import Person from '../../models/person.model'
-import { peopleData } from '../../data/people.data'
+import PeopleService from '../../services/people.service'
 import TinderCard from 'react-tinder-card'
 
 export default function TinderCards(): ReactElement {
     
-    const [people, setPeople] = useState(peopleData)
+    const peopleService = new PeopleService()
+    const [people, setPeople] = useState(new Array<Person>())
+
+    useEffect(() => {
+        const fetchData = async() => {
+            const response = await peopleService.getAll()
+            setPeople(response.data)
+        }
+        fetchData()
+    }, [])
 
     const swiped = (direction:string , nameToDelete: string) => {
         console.log(`removing ${nameToDelete}`)
